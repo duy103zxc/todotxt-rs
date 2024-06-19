@@ -14,10 +14,10 @@ fn main() {
     
     match command.as_str() {
         "add" => {
-            
+            todotxt_rs::Todo::add(suffix);
         },
         "list" => {
-            
+            todotxt_rs::Todo::list();
         },
         "update" => {
             

@@ -1,4 +1,4 @@
-use std::fs::OpenOptions;
+use std::fs::{self, OpenOptions};
 use std::io::Write;
 
 pub struct Todo {
@@ -27,7 +27,7 @@ impl Todo {
 
 // Preview file's content.
 fn cat(filename: &str) {
-    
+    println!("{}", fs::read_to_string(filename).expect("Unable to list all the tasks. \n If you haven't added any tasks, please add any before proceeding"))
 }
 
 pub fn help() {
